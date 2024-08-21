@@ -34,7 +34,7 @@
             this.txtArea = new System.Windows.Forms.TextBox();
             this.lblArea = new System.Windows.Forms.Label();
             this.cmbObjetos = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCriar = new System.Windows.Forms.Button();
             this.txtRaio = new System.Windows.Forms.TextBox();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtBase = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@
             this.gbFormas.Controls.Add(this.txtArea);
             this.gbFormas.Controls.Add(this.lblArea);
             this.gbFormas.Controls.Add(this.cmbObjetos);
-            this.gbFormas.Controls.Add(this.button1);
+            this.gbFormas.Controls.Add(this.btnCriar);
             this.gbFormas.Controls.Add(this.txtRaio);
             this.gbFormas.Controls.Add(this.txtAltura);
             this.gbFormas.Controls.Add(this.txtBase);
@@ -110,14 +110,15 @@
             this.cmbObjetos.Size = new System.Drawing.Size(121, 21);
             this.cmbObjetos.TabIndex = 10;
             // 
-            // button1
+            // btnCriar
             // 
-            this.button1.Location = new System.Drawing.Point(319, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCriar.Location = new System.Drawing.Point(319, 36);
+            this.btnCriar.Name = "btnCriar";
+            this.btnCriar.Size = new System.Drawing.Size(75, 23);
+            this.btnCriar.TabIndex = 9;
+            this.btnCriar.Text = "Criar";
+            this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
             // 
             // txtRaio
             // 
@@ -187,8 +188,7 @@
             "Circuferencia",
             "Quadrado",
             "Retangulo",
-            "Triangulo",
-            ""});
+            "Triangulo"});
             this.cmbForma.Location = new System.Drawing.Point(40, 36);
             this.cmbForma.Name = "cmbForma";
             this.cmbForma.Size = new System.Drawing.Size(121, 21);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.ComboBox cmbObjetos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.TextBox txtRaio;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtBase;
