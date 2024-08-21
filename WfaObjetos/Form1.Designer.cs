@@ -80,6 +80,7 @@
             // 
             // txtPerimetro
             // 
+            this.txtPerimetro.Enabled = false;
             this.txtPerimetro.Location = new System.Drawing.Point(293, 135);
             this.txtPerimetro.Name = "txtPerimetro";
             this.txtPerimetro.Size = new System.Drawing.Size(100, 20);
@@ -104,11 +105,13 @@
             // 
             // cmbObjetos
             // 
+            this.cmbObjetos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbObjetos.FormattingEnabled = true;
             this.cmbObjetos.Location = new System.Drawing.Point(423, 36);
             this.cmbObjetos.Name = "cmbObjetos";
             this.cmbObjetos.Size = new System.Drawing.Size(121, 21);
             this.cmbObjetos.TabIndex = 10;
+            this.cmbObjetos.SelectedIndexChanged += new System.EventHandler(this.cmbObjetos_SelectedIndexChanged);
             // 
             // btnCriar
             // 
@@ -122,6 +125,7 @@
             // 
             // txtRaio
             // 
+            this.txtRaio.Enabled = false;
             this.txtRaio.Location = new System.Drawing.Point(40, 183);
             this.txtRaio.Name = "txtRaio";
             this.txtRaio.Size = new System.Drawing.Size(100, 20);
@@ -129,6 +133,7 @@
             // 
             // txtAltura
             // 
+            this.txtAltura.Enabled = false;
             this.txtAltura.Location = new System.Drawing.Point(40, 135);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(100, 20);
@@ -136,6 +141,7 @@
             // 
             // txtBase
             // 
+            this.txtBase.Enabled = false;
             this.txtBase.Location = new System.Drawing.Point(40, 88);
             this.txtBase.Name = "txtBase";
             this.txtBase.Size = new System.Drawing.Size(100, 20);
@@ -170,6 +176,7 @@
             // 
             // cmbTriangulo
             // 
+            this.cmbTriangulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTriangulo.FormattingEnabled = true;
             this.cmbTriangulo.Items.AddRange(new object[] {
             "Equilatero",
@@ -183,6 +190,7 @@
             // 
             // cmbForma
             // 
+            this.cmbForma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbForma.FormattingEnabled = true;
             this.cmbForma.Items.AddRange(new object[] {
             "Circuferencia",

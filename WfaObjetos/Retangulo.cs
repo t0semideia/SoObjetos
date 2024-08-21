@@ -28,5 +28,10 @@
         {
            return 2*(lado2 + lado);
         }
+
+        public override string ToString()
+        {
+            return $"Retangulo ({lado}) ({lado2})";
+        }
     }
 }

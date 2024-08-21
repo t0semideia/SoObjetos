@@ -19,7 +19,11 @@ namespace WfaObjetos
 
         public override double CalcularPerimetro()
         {
-            return (Math.PI + (raio * 2) * 2);
+            return (Math.PI + (raio * 2) * 3);
+        }
+        public override string ToString()
+        {
+            return $"Circunferencia ({raio}))";
         }
     }
 }
