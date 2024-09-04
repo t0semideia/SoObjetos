@@ -48,5 +48,9 @@ namespace WfaObjetos
             // Hipotenusa usando o teorema de Pitágoras
             return Math.Sqrt(lado * lado + lado2 * lado2);
         }
+        public override string ToString()
+        {
+            return $"Triangulo Reto ({lado}) ({lado2})";
+        }
     }
 }

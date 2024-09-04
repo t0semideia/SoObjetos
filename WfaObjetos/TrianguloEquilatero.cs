@@ -22,5 +22,9 @@ namespace WfaObjetos
         {
             return 3 * lado;
         }
+        public override string ToString()
+        {
+            return $"Triangulo Equilatero ({lado})";
+        }
     }
 }

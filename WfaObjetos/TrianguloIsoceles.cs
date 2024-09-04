@@ -37,5 +37,9 @@ namespace WfaObjetos
             // Perímetro de um triângulo isósceles é a soma dos três lados
             return 2 * lado + lado2;
         }
+        public override string ToString()
+        {
+            return $"Triangulo Isoceles ({lado}) ({lado2})";
+        }
     }
 }

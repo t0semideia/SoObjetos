@@ -109,7 +109,7 @@
             this.cmbObjetos.FormattingEnabled = true;
             this.cmbObjetos.Location = new System.Drawing.Point(423, 36);
             this.cmbObjetos.Name = "cmbObjetos";
-            this.cmbObjetos.Size = new System.Drawing.Size(121, 21);
+            this.cmbObjetos.Size = new System.Drawing.Size(146, 21);
             this.cmbObjetos.TabIndex = 10;
             this.cmbObjetos.SelectedIndexChanged += new System.EventHandler(this.cmbObjetos_SelectedIndexChanged);
             // 
@@ -187,6 +187,7 @@
             this.cmbTriangulo.Size = new System.Drawing.Size(121, 21);
             this.cmbTriangulo.TabIndex = 1;
             this.cmbTriangulo.Visible = false;
+            this.cmbTriangulo.SelectedIndexChanged += new System.EventHandler(this.cmbTriangulo_SelectedIndexChanged);
             // 
             // cmbForma
             // 
@@ -210,7 +211,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbFormas);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Formas:";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbFormas.ResumeLayout(false);
             this.gbFormas.PerformLayout();
             this.ResumeLayout(false);

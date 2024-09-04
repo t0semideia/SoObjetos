@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WfaObjetos
 {
@@ -42,6 +43,26 @@ namespace WfaObjetos
             }
 
             
+        }
+        private void cmbTriangulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cmbTriangulo.Text)
+            {
+                case "Reto":
+                    SelecionarTrianguloReto();
+                    break;
+
+                case "Isoceles":
+                    SelecionarTrianguloIsoceles();
+                    break;
+
+                case "Equilatero":
+                    SelecionarTrianguloEquilatero();
+                    break;
+
+                default:
+                    break;
+            }
         }
 
         private void ExibirBase(bool visivel)
@@ -95,6 +116,24 @@ namespace WfaObjetos
             ExibirComboTriangulo(true);
 
         }
+        private void SelecionarTrianguloIsoceles()
+        {
+            ExibirBase(true);
+            ExibirAltura(true);
+
+        }
+        private void SelecionarTrianguloEquilatero()
+        {
+            ExibirBase(true);
+            ExibirAltura(false);
+
+        }
+        private void SelecionarTrianguloReto()
+        {
+            ExibirBase(true);
+            ExibirAltura(true);
+
+        }
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
@@ -113,8 +152,28 @@ namespace WfaObjetos
                 FormaGeometrica circuferencia = new Circuferencia() { Raio = Convert.ToInt32(txtRaio.Text) };
                 cmbObjetos.Items.Add(circuferencia);
             }
-            
-        }
+            if (cmbForma.Text.Equals("Triangulo"))
+            {
+                if (cmbTriangulo.Text.Equals("Reto"))
+                {
+                    Triangulo triangulo = new TrianguloReto() { Lado = Convert.ToInt32(txtBase.Text), Lado2 = Convert.ToInt32(txtAltura.Text) };
+                    cmbObjetos.Items.Add(triangulo);
+                }
+
+                if (cmbTriangulo.Text.Equals("Isoceles"))
+                {
+                    Triangulo triangulo = new TrianguloIsoceles() { Lado = Convert.ToInt32(txtBase.Text), Lado2 = Convert.ToInt32(txtAltura.Text) };
+                    cmbObjetos.Items.Add(triangulo);
+                }
+
+                if (cmbTriangulo.Text.Equals("Equilatero"))
+                {
+                    Triangulo triangulo = new TrianguloEquilatero() { Lado = Convert.ToInt32(txtBase.Text)};
+                    cmbObjetos.Items.Add(triangulo);
+                }
+            }
+
+            }
 
         private void cmbObjetos_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -122,5 +181,12 @@ namespace WfaObjetos
             txtArea.Text = obj.CalcularArea().ToString();
             txtPerimetro.Text = obj.CalcularPerimetro().ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbForma.SelectedIndex = 2;
+            cmbTriangulo.SelectedIndex = 1;
+        }
+
     }
 }
