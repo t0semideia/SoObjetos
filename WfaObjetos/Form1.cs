@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WfaObjetos
@@ -178,15 +179,14 @@ namespace WfaObjetos
         private void cmbObjetos_SelectedIndexChanged(object sender, EventArgs e)
         {
             FormaGeometrica obj = cmbObjetos.SelectedItem as FormaGeometrica;
-            txtArea.Text = obj.CalcularArea().ToString();
-            txtPerimetro.Text = obj.CalcularPerimetro().ToString();
+            txtArea.Text = obj.CalcularArea().ToString(new CultureInfo("pt-BR"));
+            txtPerimetro.Text = obj.CalcularPerimetro().ToString(new CultureInfo("pt-BR"));
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             cmbForma.SelectedIndex = 2;
-            cmbTriangulo.SelectedIndex = 1;
+            cmbTriangulo.SelectedIndex = 0;
         }
-
     }
 }

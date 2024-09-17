@@ -179,8 +179,8 @@
             this.cmbTriangulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTriangulo.FormattingEnabled = true;
             this.cmbTriangulo.Items.AddRange(new object[] {
-            "Equilatero",
             "Isoceles",
+            "Equilatero",
             "Reto"});
             this.cmbTriangulo.Location = new System.Drawing.Point(167, 36);
             this.cmbTriangulo.Name = "cmbTriangulo";

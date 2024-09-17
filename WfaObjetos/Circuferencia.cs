@@ -23,7 +23,7 @@ namespace WfaObjetos
         }
         public override string ToString()
         {
-            return $"Circunferencia ({raio}))";
+            return $"Circunferencia ({raio})";
         }
     }
 }
