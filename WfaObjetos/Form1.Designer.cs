@@ -29,34 +29,37 @@
         private void InitializeComponent()
         {
             this.gbFormas = new System.Windows.Forms.GroupBox();
+            this.txtRaio = new System.Windows.Forms.NumericUpDown();
+            this.txtAltura = new System.Windows.Forms.NumericUpDown();
+            this.txtBase = new System.Windows.Forms.NumericUpDown();
             this.lblPerimetro = new System.Windows.Forms.Label();
             this.txtPerimetro = new System.Windows.Forms.TextBox();
             this.txtArea = new System.Windows.Forms.TextBox();
             this.lblArea = new System.Windows.Forms.Label();
             this.cmbObjetos = new System.Windows.Forms.ComboBox();
             this.btnCriar = new System.Windows.Forms.Button();
-            this.txtRaio = new System.Windows.Forms.TextBox();
-            this.txtAltura = new System.Windows.Forms.TextBox();
-            this.txtBase = new System.Windows.Forms.TextBox();
             this.lblRaio = new System.Windows.Forms.Label();
             this.lblAltura = new System.Windows.Forms.Label();
             this.lblBase = new System.Windows.Forms.Label();
             this.cmbTriangulo = new System.Windows.Forms.ComboBox();
             this.cmbForma = new System.Windows.Forms.ComboBox();
             this.gbFormas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRaio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAltura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBase)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFormas
             // 
+            this.gbFormas.Controls.Add(this.txtRaio);
+            this.gbFormas.Controls.Add(this.txtAltura);
+            this.gbFormas.Controls.Add(this.txtBase);
             this.gbFormas.Controls.Add(this.lblPerimetro);
             this.gbFormas.Controls.Add(this.txtPerimetro);
             this.gbFormas.Controls.Add(this.txtArea);
             this.gbFormas.Controls.Add(this.lblArea);
             this.gbFormas.Controls.Add(this.cmbObjetos);
             this.gbFormas.Controls.Add(this.btnCriar);
-            this.gbFormas.Controls.Add(this.txtRaio);
-            this.gbFormas.Controls.Add(this.txtAltura);
-            this.gbFormas.Controls.Add(this.txtBase);
             this.gbFormas.Controls.Add(this.lblRaio);
             this.gbFormas.Controls.Add(this.lblAltura);
             this.gbFormas.Controls.Add(this.lblBase);
@@ -68,6 +71,45 @@
             this.gbFormas.TabIndex = 0;
             this.gbFormas.TabStop = false;
             this.gbFormas.Text = "Formas Geometricas";
+            // 
+            // txtRaio
+            // 
+            this.txtRaio.Location = new System.Drawing.Point(40, 184);
+            this.txtRaio.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.txtRaio.Name = "txtRaio";
+            this.txtRaio.Size = new System.Drawing.Size(120, 20);
+            this.txtRaio.TabIndex = 17;
+            this.txtRaio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumericKeyPressGeral);
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.Location = new System.Drawing.Point(40, 134);
+            this.txtAltura.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(120, 20);
+            this.txtAltura.TabIndex = 16;
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumericKeyPressGeral);
+            // 
+            // txtBase
+            // 
+            this.txtBase.Location = new System.Drawing.Point(40, 86);
+            this.txtBase.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.txtBase.Name = "txtBase";
+            this.txtBase.Size = new System.Drawing.Size(120, 20);
+            this.txtBase.TabIndex = 15;
+            this.txtBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumericKeyPressGeral);
             // 
             // lblPerimetro
             // 
@@ -122,30 +164,6 @@
             this.btnCriar.Text = "Criar";
             this.btnCriar.UseVisualStyleBackColor = true;
             this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
-            // 
-            // txtRaio
-            // 
-            this.txtRaio.Enabled = false;
-            this.txtRaio.Location = new System.Drawing.Point(40, 183);
-            this.txtRaio.Name = "txtRaio";
-            this.txtRaio.Size = new System.Drawing.Size(100, 20);
-            this.txtRaio.TabIndex = 8;
-            // 
-            // txtAltura
-            // 
-            this.txtAltura.Enabled = false;
-            this.txtAltura.Location = new System.Drawing.Point(40, 135);
-            this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(100, 20);
-            this.txtAltura.TabIndex = 7;
-            // 
-            // txtBase
-            // 
-            this.txtBase.Enabled = false;
-            this.txtBase.Location = new System.Drawing.Point(40, 88);
-            this.txtBase.Name = "txtBase";
-            this.txtBase.Size = new System.Drawing.Size(100, 20);
-            this.txtBase.TabIndex = 6;
             // 
             // lblRaio
             // 
@@ -210,11 +228,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbFormas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Formas:";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbFormas.ResumeLayout(false);
             this.gbFormas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRaio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAltura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBase)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,9 +255,9 @@
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.ComboBox cmbObjetos;
         private System.Windows.Forms.Button btnCriar;
-        private System.Windows.Forms.TextBox txtRaio;
-        private System.Windows.Forms.TextBox txtAltura;
-        private System.Windows.Forms.TextBox txtBase;
+        private System.Windows.Forms.NumericUpDown txtRaio;
+        private System.Windows.Forms.NumericUpDown txtAltura;
+        private System.Windows.Forms.NumericUpDown txtBase;
     }
 }
 

@@ -14,6 +14,7 @@ namespace WfaObjetos
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -185,8 +186,22 @@ namespace WfaObjetos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cmbForma.SelectedIndex = 2;
+           
+                 cmbForma.SelectedIndex = 2;
             cmbTriangulo.SelectedIndex = 0;
+        }
+
+        private void NumericKeyPressGeral(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < 48 || e.KeyChar > 57)
+            {
+
+                e.Handled = true;
+                if (e.KeyChar == 8)
+                {
+                    e.Handled = false;
+                }
+            }
         }
     }
 }
